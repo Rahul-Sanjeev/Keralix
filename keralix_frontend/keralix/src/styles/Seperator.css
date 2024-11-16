@@ -1,0 +1,22 @@
+.sep-container {
+    display: flex;
+    flex-direction: column;
+    /* Align items vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    /* Add some padding for better spacing */
+}
+
+
+.sep-text {
+    font-size: 1.5rem;
+    font-weight: 3rem;
+    color: rgb(0, 97, 0);
+}
+
+.sep-subtext {
+    font-size: 0.9rem !important;
+    color: #666 !important;
+}

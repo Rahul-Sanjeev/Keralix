@@ -1,0 +1,39 @@
+.privacy-policy {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #EFE6D4;
+    line-height: 1.6;
+    /* Increase line height for better readability */
+    color: black;
+}
+
+h1,
+h2 {
+    color: #4c6023;
+    /* Darker text color for headings */
+}
+
+ul {
+    list-style-type: disc;
+    /* Bullet points for lists */
+    margin-left: 20px;
+    /* Indent lists */
+}
+
+p {
+    color: black;
+    /* Standard text color for paragraphs */
+}
+
+/* Additional styles for links if necessary */
+a {
+    color: #4c6023;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Underline on hover for links */
+}

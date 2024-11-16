@@ -1,0 +1,156 @@
+/* Announcement Bar */
+.announcement-bar {
+    display: flex;
+    overflow: hidden;
+    /* Hide overflow for a clean appearance */
+    background-color: #EFE6D4;
+    padding: 0;
+    height: 5vh;
+    /* background: linear-gradient(135deg, #F5F5F5 0%, #e0e0e0 100%); */
+}
+
+/* Announcement Text */
+.announcement-txt {
+    display: flex;
+    /* Use flex for alignment */
+    align-items: center;
+    /* Center items vertically */
+    font-size: .9rem;
+    /* Base font size */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    margin-right: 30px;
+    /* Spacing between messages */
+    color: #4c6023;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .announcement-txt {
+        font-size: .6rem;
+    }
+}
+
+/* General Reset for header */
+header {
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+/* Logo Styling */
+.logo {
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 10vw;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.logo span {
+    font-size: .5rem;
+    font-weight: bold;
+    margin-left: 24px;
+
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.nav-links li a {
+    margin-right: 2rem;
+    color: black;
+    gap: 3vw;
+}
+
+
+.nav-links li a:hover {
+    color: #729855;
+}
+
+/* Search Bar */
+.nav-trailer .search-bar {
+    display: flex;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    justify-content: space-around;
+}
+
+/* Burger Menu */
+.burger {
+    display: none;
+    z-index: 9;
+    margin-right: 5vw;
+}
+
+/* Account and Cart Icons */
+.nav-trailer {
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Smart Phone */
+
+@media (max-width: 490px) {
+    .burger {
+        display: flex;
+        position: relative;
+    }
+
+    /* Hide desktop nav-links */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show nav-links when burger is active */
+    .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        right: 0;
+        margin: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .nav-links li a {
+        margin: 1rem 0;
+    }
+
+    /* Search Bar */
+    .nav-trailer .search-bar input {
+        width: 20vw;
+    }
+}

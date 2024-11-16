@@ -1,0 +1,20 @@
+.company-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.form-control {
+    padding: 0.5rem 1rem;
+}
+
+.form .btn {
+    background-color: #023303;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.form .btn:hover {
+    background-color: #4c712f;
+}

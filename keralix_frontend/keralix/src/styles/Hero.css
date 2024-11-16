@@ -1,0 +1,102 @@
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f4f4f4;
+    padding: 50px;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 50%;
+    cursor: grab;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.cta-button {
+    width: 20vw;
+    padding: 10px 20px;
+    background-color: #023303;
+    color: white;
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #4c712f;
+}
+
+.paginator {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paginator-line {
+    width: .06rem;
+    height: 2rem;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.paginator-line.active {
+    background-color: #4c712f;
+}
+
+/* Responsive for Mobile Phones */
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 30px;
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .paginator {
+        position: absolute;
+        right: 3.5px;
+        top: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14vh;
+        height: 3rem;
+        font-size: .7rem;
+        padding: 0;
+    }
+}
