@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Footer.css'
 
-import KeralixLogo from '../assets/images/KeralixLogo.svg';
+import KeralixLogoFooter from '../assets/images/KeralixLogoFooter.svg';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -22,9 +22,9 @@ export default function Footer() {
               {/* Left Section with Logo and Description */}
               <div className="col-12 col-sm-6 col-md-3 text-md-start d-flex justify-content-center align-items-center">
                 <div className='footer-logo'>
-                  <img src={KeralixLogo} alt="Keralix Logo" />
-                  <p><em>Rooted With Tradition</em></p>
-                  <h4>KERALIX PVT. LTD.</h4>
+                  <img src={KeralixLogoFooter} alt="Keralix Logo" />
+                  <p><em></em></p>
+                  
 
                   <br />
                 </div>
@@ -52,7 +52,7 @@ export default function Footer() {
               </div>
 
               {/* Email Signup Section */}
-              <div className="footer-logo col-12 col-sm-6 col-md-3 my-3 d-flex flex-column text-center align-items-center">
+              {/* <div className="footer-logo col-12 col-sm-6 col-md-3 my-3 d-flex flex-column text-center align-items-center">
                 <h5>Get Active <em>Updates</em></h5>
                 <p>
                   The ideal way to stay in contact and learn about our exclusive offers.
@@ -61,7 +61,7 @@ export default function Footer() {
                   <input type="email" className="form-control my-3 mb-2" placeholder="Your Email Id" />
                   <button className="btn btn-dark w-100" type="submit">SUBMIT NOW</button>
                 </form>
-              </div>
+              </div> */}
             </div>
 
             {/* Social Icons Section */}

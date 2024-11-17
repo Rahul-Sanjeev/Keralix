@@ -3,7 +3,7 @@
     display: flex;
     overflow: hidden;
     /* Hide overflow for a clean appearance */
-    background-color: #EFE6D4;
+    background-color: #FFC94A;
     padding: 0;
     height: 5vh;
     /* background: linear-gradient(135deg, #F5F5F5 0%, #e0e0e0 100%); */
@@ -25,132 +25,156 @@
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .announcement-txt {
         font-size: .6rem;
     }
 }
 
-/* General Reset for header */
+/* General Styling */
 header {
-    background: white;
+    background: #f5f9f9;
     padding: 0;
     margin: 0;
+    height: 18vh;
 }
-
 
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 12vh;
-    width: 100vw;
-    padding: 0;
-    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 /* Logo Styling */
 .logo {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    height: 10vh;
-    width: 10vw;
+    height: 100%;
 }
 
 .logo img {
     height: 100%;
-    width: 100%;
     cursor: pointer;
-    margin-left: 15px;
 }
 
-.logo span {
-    font-size: .5rem;
-    font-weight: bold;
-    margin-left: 24px;
-
+.logo .logo-icon{
+    height: 6vw;
 }
+
+.logo .logo-image {
+    height: 15vw;
+}
+
 
 /* Desktop Navigation Links */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 3rem;
-    margin-left: 0;
-    padding-left: 0;
+    font-size:1.3rem;
+    gap: 2rem;
 }
 
 .nav-links li a {
-    margin-right: 2rem;
     color: black;
-    gap: 3vw;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-
 
 .nav-links li a:hover {
-    color: #729855;
+    color: #557C56;
 }
 
-/* Search Bar */
+/* Account, Cart, and Search Bar */
+.nav-trailer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.nav-trailer a{
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-trailer a:hover {
+    color: #557C56;
+}
+
 .nav-trailer .search-bar {
     display: flex;
-    cursor: pointer;
+    align-items: center;
     border: 1px solid #ccc;
     border-radius: 1rem;
-    justify-content: space-around;
+    padding: 0 0.5rem;
+}
+
+.nav-trailer .search-bar input {
+    border: none;
+    border-radius: .6rem;
+    outline: none;
+    background: white;
+    /* width: 100%; */
+    /* Fixed width for better UX */
+}
+
+.nav-trailer .search-bar input::placeholder {
+    color: #999;
 }
 
 /* Burger Menu */
 .burger {
     display: none;
-    z-index: 9;
-    margin-right: 5vw;
+    cursor: pointer;
 }
 
-/* Account and Cart Icons */
-.nav-trailer {
-    display: flex;
-    gap: 3vw;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-/* Smart Phone */
-
-@media (max-width: 490px) {
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
     .burger {
         display: flex;
-        position: relative;
+        align-items: center;
     }
 
     /* Hide desktop nav-links */
     .nav-links {
         display: none;
+        transition: all 0.3s ease;
+        transform: translateY(-100%);
+        opacity: 0;
     }
 
     /* Show nav-links when burger is active */
     .nav-links.active {
         display: flex;
+        flex-direction: column;
         position: absolute;
-        top: 15vh;
+        align-items: center;
+        width: 100%;
+        top: 24vw;
         left: 0;
         right: 0;
-        margin: 0;
-        flex-direction: column;
-        background-color: white;
-        width: 100%;
-        padding: 20px 0;
-        text-align: center;
+        background: #f5f9f9;
         z-index: 10;
+        padding: 1rem 0;
+        margin: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
+        opacity: 1;
     }
 
     .nav-links li a {
-        margin: 1rem 0;
+        padding: 0.5rem 0;
+        color: black;
     }
 
-    /* Search Bar */
+    .nav-trailer {
+        gap: 1rem;
+    }
+
     .nav-trailer .search-bar input {
-        width: 20vw;
+        width: 150px;
     }
 }

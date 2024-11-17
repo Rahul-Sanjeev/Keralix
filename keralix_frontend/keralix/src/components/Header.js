@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Header.css';
+import KeralixLogoIcon from '../assets/images/KeralixLogoIcon.svg';
 import KeralixLogo from '../assets/images/KeralixLogo.svg';
 import Marquee from 'react-fast-marquee';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -69,12 +70,13 @@ export default function Header() {
 
                 <nav className='col-md-12'>
                     {/* Logo */}
-                    <div className="col-md-1 logo">
-                        <img src={KeralixLogo} alt="Keralix Logo" />
+                    <div className="col-md-3 logo">
+                        <img src={KeralixLogoIcon} alt="Keralix Icon" className="logo-icon" />
+                        <img src={KeralixLogo} alt="Keralix Logo" className="logo-image" />
                     </div>
 
                     {/* Desktop Navigation Links */}
-                    <div className='col-md-4'>
+                    <div className='col-md-5'>
                         <ul className={`nav-links ${active ? 'active' : ''}`}>
                             <li><Link to={HomePath} onClick={handleLinkClick} >Home</Link></li>
                             <li><Link to={ProductsPath} onClick={handleLinkClick} >Products</Link></li>
@@ -97,24 +99,24 @@ export default function Header() {
                         <Link to={AddToCartPath} className="cart-icon">
                             <CiShoppingCart size={30} />
                         </Link>
+                        {/* Mobile Menu Toggle */}
+                        <div className='burger'>
+                            <i onClick={() => setActive(!active)}>
+                                <Burger
+                                    size="sm"
+                                    opened={opened}
+                                    onClick={toggle}
+                                    aria-label="Toggle navigation"
+                                    className="container-fluid text-black"
+                                    color='black'
+                                />
+                            </i>
+                        </div>
+
                     </div>
 
-                    {/* Mobile Menu Toggle */}
-                    <div className='burger'>
-                        <i onClick={() => setActive(!active)}>
-                            <Burger
-                                size="sm"
-                                opened={opened}
-                                onClick={toggle}
-                                aria-label="Toggle navigation"
-                                className="container-fluid text-black"
-                                color='black'
-                            />
-                        </i>
-                    </div>
 
                 </nav>
-
             </header>
 
         </>
