@@ -1,0 +1,149 @@
+/* General Container Styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Login Form Styling */
+.login-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Title Styling */
+.login-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Input Field Styling */
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Text Styling */
+.login-footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+.login-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-form {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .login-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
+
+/* Small Mobile View (Phones with width <= 480px) */
+@media (max-width: 480px) {
+    .login-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .form-group input {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .login-btn {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .login-form {
+        padding: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+}

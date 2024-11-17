@@ -46,13 +46,14 @@ nav {
     align-items: center;
     height: 100%;
     width: 100%;
-    padding: 0 1rem;
+    padding: 1vw;
 }
 
 /* Logo Styling */
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
 }
 
@@ -66,7 +67,7 @@ nav {
 }
 
 .logo .logo-image {
-    height: 15vw;
+    height: 12.5vw;
 }
 
 

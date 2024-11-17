@@ -17,6 +17,7 @@ import OilProducts from './components/Products/OilProducts';
 import LotionProducts from './components/Products/LotionProducts';
 import CreamProducts from './components/Products/CreamProducts';
 import { CartProvider } from './components/Cart/CartContext';
+import UserRegister from './components/Accounts/UserRegister';
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
                 </>
               }
             />
+
+            {/* Account routes */}
+            <Route path="/register" element={<UserRegister />} />
+            <Route path="/login" element={<UserLogIn />} />
 
             {/* Other routes for dynamic page content */}
             <Route path="/about" element={<About />} />
